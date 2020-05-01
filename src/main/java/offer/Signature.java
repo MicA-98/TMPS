@@ -1,10 +1,8 @@
 package offer;
-
-import java.util.HashMap;
-
+//Singleton Pattern
 public class Signature {
     private static Signature signature = null;
-    private String sign = "Fabrica De Bomboane Botnaru Mihaela";
+    private String sign;
 
     private Signature() {
     }
@@ -14,8 +12,10 @@ public class Signature {
     }
 
     public static Signature getInstance() {
-        if (signature == null)
+        if (signature == null) {
             signature = new Signature();
+            signature.sign = "Fabrica De Bomboane Botnaru Mihaela";
+        }
         return signature;
     }
 }
